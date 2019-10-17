@@ -1,28 +1,32 @@
-#include <stdio.h>
+#include<stdio.h>
 #include <math.h>
-double foo(double x){
-	int i ;
-	double a;
-	for (i=0;i<x;i++){
-	if(i%2!=0){
-	a+=(1/i)*pow(((x-1)/(x+1)),i);	
+int main(){
+	
+	int arr[10];
+	int chet[5];
+	int nechet[5];
+	int a,t;
+	for(a = 0;a<10;a++){
+		scanf("%d",&arr[a]);
 	}
-				
+	for(a= 0;a<10;a++){
+		if(arr[a]%2==0){
+			chet[a]=arr[a];
+		}
+		else{
+			nechet[a]=arr[a];
+		}
 	}
-return a*2 ;	
+	
+	for (a=0;a<5;a++){
+		t+=chet[a];
+	}
+	printf("%d\n",t);
+	t=0;
+	for (a=0;a<5;a++){
+		t+=nechet[a];
+	}
+	printf("%d",t);
+return 0 ;
 }
 
-int main(){
-	double step,kol=80,a, b=2;
-	for(a=0.5;a<b;a+=0.1){
-		
-		printf("%f\n",foo(a));
-	}
-	printf("-----------------------\n");	
-	for(a=0.5;a<b;a+=0.1){
-		printf("%f\n",log(a));
-	}
-	
-	
-	return 0;
-}
